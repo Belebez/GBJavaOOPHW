@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
         Book book1 = new Book("Братья Карамазовы", "Достоевский", 1880);
 //        Book book2 = new Book("Бесы", "Достоевский", 1873);
-//        Book book3 = new Book("Морской Волк", "Лондон", 1904);
+        Book book3 = new Book("Морской Волк", "Лондон", 1904);
 //        Book book4 = new Book("Капитанская дочка", "Пушкин", 1836);
 //        Book book5 = new Book("Евгений Онегин", "Пушкин", 1833);
 //
@@ -64,7 +64,7 @@ public class Main {
                     Case.addBook(string1);
                     break;
                 case 5 :
-                    System.out.print("\nВведите название книги --> ");
+                    System.out.print("\nВведите название --> ");
                     Scanner scanner5 = new Scanner(System.in);
                     String string2 = scanner5.nextLine();
                     Case.deleteBook(string2);

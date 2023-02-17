@@ -8,8 +8,6 @@ public class Book {
     private int datePublication;
 
     private static int id;
-
-
     private static HashMap<Integer, Book> bookList = new HashMap<Integer, Book>();
 
     static {
@@ -51,5 +49,9 @@ public class Book {
 
     public static HashMap<Integer, Book> getBookList() {
         return bookList;
+    }
+
+    public static void setBookList(HashMap<Integer, Book> bookList) {
+        Book.bookList = bookList;
     }
 }

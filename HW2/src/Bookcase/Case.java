@@ -1,7 +1,8 @@
 package Bookcase;
 
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Case {
     // создадим массив для хранения объектов класса Book
@@ -23,12 +24,14 @@ public class Case {
     }
 
     public static void deleteBook(String s) {
+        String string = s.toLowerCase();
         if (Book.getBookList().size() == 0) {
             System.out.println("Книг нет, в нашей библиотеке...");
         } else {
-            for (Book book: Book.getBookList().values()) {
-                if ((book.getNameBook().equalsIgnoreCase(s)) || (book.getWriterBook().equalsIgnoreCase(s))) {
-                    Book.getBookList().remove(book);
+            for (Map.Entry<Integer, Book> book: Book.getBookList().entrySet()) {
+                if (book.getValue().getNameBook().toLowerCase().contains(string)) {
+                    Book.getBookList().remove(book.getKey());
+                    Book.setBookList(Book.getBookList());
                     System.out.println("\nКнига удалена.\n");
                 }
             }
