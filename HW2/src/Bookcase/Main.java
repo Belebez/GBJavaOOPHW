@@ -15,10 +15,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Book book1 = new Book("Братья Карамазовы", "Достоевский", 1880);
-        Book book2 = new Book("Бесы", "Достоевский", 1873);
-        Book book3 = new Book("Морской Волк", "Лондон", 1904);
-        Book book4 = new Book("Капитанская дочка", "Пушкин", 1836);
-        Book book5 = new Book("Евгений Онегин", "Пушкин", 1833);
+//        Book book2 = new Book("Бесы", "Достоевский", 1873);
+//        Book book3 = new Book("Морской Волк", "Лондон", 1904);
+//        Book book4 = new Book("Капитанская дочка", "Пушкин", 1836);
+//        Book book5 = new Book("Евгений Онегин", "Пушкин", 1833);
 //
 //        // метод для понимания количества книг
 //        Case.countBook();
@@ -45,10 +45,10 @@ public class Main {
             int taskNum1 = scanner1.nextInt();
             switch (taskNum1) {
                 case 1 :
-                    System.out.printf("\nСписок книг:\n%s\n", Book.getBookList());
+                    Case.listBook();
                     break;
                 case 2 :
-                    System.out.printf("\nКоличество книг - %d\n", Case.countBook());
+                    Case.countBook();
                     break;
                 case 3 :
                     System.out.print("\nВведите название книги или фамилию писателя, или год публикации --> ");
@@ -57,10 +57,11 @@ public class Main {
                     Case.searchBook(string);
                     break;
                 case 4 :
-                    System.out.println("К сожалению, пока в разработке..");
-//                    System.out.print("\nВведите название книги, фамилию писателя, год публикации через пробел --> ");
-//                    Scanner scanner4 = new Scanner(System.in);
-//                    String string1 = scanner4.nextLine();
+//                    System.out.println("К сожалению, пока в разработке..");
+                    System.out.print("\nВведите название книги, фамилию писателя, год публикации через пробел --> ");
+                    Scanner scanner4 = new Scanner(System.in);
+                    String string1 = scanner4.nextLine();
+                    Case.addBook(string1);
                     break;
                 case 5 :
                     System.out.print("\nВведите название книги --> ");
