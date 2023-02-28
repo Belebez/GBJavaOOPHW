@@ -12,10 +12,10 @@ public class Main {
         Transport train1 = new PassengerTrain();
         Transport bus2 = new Bus();
         Transport train2 = new PassengerTrain();
-        System.out.println(bus1.toString());
-        System.out.println(train1.toString());
-        System.out.println(bus2.toString());
-        System.out.println(train2.toString());
+        System.out.println(bus1);
+        System.out.println(train1);
+        System.out.println(bus2);
+        System.out.println(train2);
 
     }
 }
