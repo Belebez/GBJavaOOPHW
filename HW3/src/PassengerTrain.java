@@ -6,9 +6,9 @@ public class PassengerTrain extends Railway{
 
 
     public PassengerTrain() {
-        setTypeOfTransport("Наземный");
-        setTypeGround("Железнодорожный");
-        setTypeTrain("Пассажирский");
+        super.typeOfTransport = "Наземный";
+        super.typeGround = "Железнодорожный";
+        super.typeTrain = "Пассажирский";
         getCapacityTrain();
         getNumWagons();
     }

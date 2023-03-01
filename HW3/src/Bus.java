@@ -5,9 +5,9 @@ public class Bus extends Automobile{
 
 
     public Bus() {
-        setTypeOfTransport("Наземный");
-        setTypeGround("Автомобиль");
-        setTypeAutomobile("Автобус");
+        super.typeOfTransport = "Наземный";
+        super.typeGround = "Автомобиль";
+        super.typeAutomobile = "Автобус";
         getCapacityBus();
     }
 
