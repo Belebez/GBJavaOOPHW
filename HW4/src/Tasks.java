@@ -1,19 +1,17 @@
 public class Tasks {
 
-    private final int id;
-    private int count;
-    private int duration;
-    private int deadLine;
-    private String nameTask;
-    private String priority;
+    protected final int id;
+    private static int count;
+    protected String nameTask;
+    protected String priority;
+    protected String creator;
 
-    public Tasks(int id, int duration, int deadLine, String nameTask, String priority) {
+    public Tasks(String nameTask, String priority, String creator) {
         count++;
         this.id = getCount();
-        this.duration = duration;
-        this.deadLine = deadLine;
         this.nameTask = nameTask;
         this.priority = priority;
+        this.creator = creator;
     }
 
     public int getCount() {

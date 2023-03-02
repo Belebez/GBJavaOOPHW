@@ -14,8 +14,28 @@
 **** Файл должен содержать следующие данные: id, дату добавления записи, время добавления записи, дедлай задачи, ФИО автора и др
  */
 
+
 public class Main {
     public static void main(String[] args) {
+        Tasks reminder = new Reminder("Забрать заказ", "Обычный", "06.03.2023", "I'm");
+        Tasks reminder1 = new Reminder("Купить шины", "Обычный", "08.04.2023", "I'm");
+        Tasks event = new Event("Концерт Park Live", "Высокий", "18.07.2023", 3, "I'm");
+        Tasks event1 = new Event("Фортепиано. Л. Энауди. Концерт №1", "Высокий", "12.03.2023", 1, "I'm");
+
+
+//        System.out.println(reminder);
+//        System.out.println();
+//        System.out.println(event);
+//        System.out.println(reminder1);
+//        System.out.println();
+//        System.out.println(event1);
+
+        MyCalendar.addTasks(reminder);
+        MyCalendar.addTasks(reminder1);
+        MyCalendar.addTasks(event);
+        MyCalendar.addTasks(event1);
+
+        MyCalendar.fileWriter();
 
     }
 }
