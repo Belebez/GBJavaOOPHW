@@ -29,7 +29,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "\nКнига:\n" +
+        return "\nКнига:" + id + "\n" +
                 "1. Название = " + nameBook + "\n" +
                 "2. Писатель = " + writerBook + "\n" +
                 "3. Дата публикации = " + datePublication + " г.\n";

@@ -6,7 +6,6 @@
     3. car1.equalsCar(Cars car2) - метод который сравнивает машины, если они одного типа.
 
  */
- */
 public class Main {
     public static void main(String[] args) {
         Cars car1 = new Cars("Спортивная", "Ferrari", 2020, 220000.0, 5.0);

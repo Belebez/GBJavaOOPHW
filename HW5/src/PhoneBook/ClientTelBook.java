@@ -1,4 +1,6 @@
-package TelBook;
+package PhoneBook;
+
+import PhoneBook.ConsoleMenu.MyMenu;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -8,6 +10,7 @@ import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class ClientTelBook {
+    static MyMenu myMenu = new MyMenu();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String request;
@@ -16,29 +19,17 @@ public class ClientTelBook {
             DataOutputStream dataOutput = new DataOutputStream(socket.getOutputStream());
             DataInputStream dataInput = new DataInputStream(socket.getInputStream());
 
+            System.out.print(myMenu.menuConsole());
 
-            boolean flag = true;
-            while (flag) {
-                System.out.print("\nТелефонный справочник\n \nВыберите пункт:\n" +
-                        "1. Показать cправочник.\n" +
-                        "2. Количество контактов.\n" +
-                        "3. Найти контакт.\n" +
-                        "4. Добавить контакт.\n" +
-                        "5. Удалить контакт.\n" +
-                        "6. Добавить справочник.\n" +
-                        "\n" +
-                        "0. Выход\n");
-                System.out.print("\nВведите номер задачи --> ");
+            while (true) {
                 request = sc.next();
                 dataOutput.writeUTF(request);
                 if("0".equals(request)) {
                     System.out.println("Good Bye!");
-                    flag = false;
+                    break;
                 }
-                System.out.println("Получили от сервера: " + dataInput.readUTF());
-
+                System.out.println(dataInput.readUTF());
             }
-
 
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
